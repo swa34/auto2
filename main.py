@@ -44,7 +44,7 @@ class Browser:
         self.click_button(by=By.ID, value='coral-id-42')
 
     def quick_publish(self, ):
-        self.click_button(by=By.XPATH, value='//button[@trackingelement="Quick Publish"]')
+        self.click_button(by=By.XPATH, value='//button[@trackingelement="quick publish"]')
 
 
 if __name__ == '__main__':
@@ -58,7 +58,8 @@ if __name__ == '__main__':
     browser.login_aem(username='sa69508', password='Willsjack1212@')
     browser.click_sites()
     browser.click_newswire()
-    time.sleep(4000)
+    browser.quick_publish()
+    time.sleep(10)
 
     # browser.open_page('https://www.google.com')
     # time.sleep(3)
