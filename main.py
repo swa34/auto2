@@ -1,4 +1,5 @@
 import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -55,14 +56,15 @@ if __name__ == '__main__':
     # 'https://chromedriver.chromium.org/downloads'
     browser = Browser('Drivers/chromedriver.exe')
 
-    browser.open_page('https://devaem.caes.uga.edu:8443/')
-    time.sleep(3)
+    browser.open_page('https://aem.caes.uga.edu:8443/')
+    time.sleep(5)
 
     browser.login_aem(username='sa69508', password='Willsjack1212@')
     browser.click_sites()
     browser.click_newswire()
     browser.quick_publish()
     browser.click_publish()
+
     time.sleep(10)
 
     # browser.open_page('https://www.google.com')
