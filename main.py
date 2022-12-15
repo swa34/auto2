@@ -46,6 +46,9 @@ class Browser:
     def quick_publish(self, ):
         self.click_button(by=By.XPATH, value='//button[@trackingelement="quick publish"]')
 
+    def click_publish(self, ):
+        self.click_button(by=By.XPATH, value='//button[@class="coral3-Button coral3-Button--primary"]')
+
 
 if __name__ == '__main__':
     # When Chrome is updated the chromedriver.exe needs to be updated as well SA 12/14/22
@@ -59,6 +62,7 @@ if __name__ == '__main__':
     browser.click_sites()
     browser.click_newswire()
     browser.quick_publish()
+    browser.click_publish()
     time.sleep(10)
 
     # browser.open_page('https://www.google.com')
