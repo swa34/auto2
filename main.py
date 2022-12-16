@@ -3,6 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from email_submit import *
 
 
 class Browser:
@@ -57,20 +58,13 @@ if __name__ == '__main__':
     browser = Browser('Drivers/chromedriver.exe')
 
     browser.open_page('https://aem.caes.uga.edu:8443/')
-    time.sleep(5)
+    time.sleep(8)
 
     browser.login_aem(username='sa69508', password='Willsjack1212@')
     browser.click_sites()
     browser.click_newswire()
     browser.quick_publish()
     browser.click_publish()
+    send_email()
 
-    time.sleep(10)
-
-    # browser.open_page('https://www.google.com')
-    # time.sleep(3)
-    #
-    # browser.open_page('https://uga.edu/')
-    # time.sleep(3)
-    #
-    # browser.close_browser()
+time.sleep(8)
